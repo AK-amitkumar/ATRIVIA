@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="SaleOrderLine">
+        <tr class='client-line' t-att-data-id='order.id'>
+            <td><t t-esc='order.name' /></td>
+            <td><t t-if="order.partner_id"><t t-esc='order.partner_name' /></t></td>
+            <td><t t-esc='order.create_date' /></td>
+            <td><t t-esc='order.total_amount' /></td>
+            <td><button class="wv_process_order_button" t-att-data-id='order.id'><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button></td>
+        </tr>
+    </t>
+    <t t-name="SaleOrderListScreenWidget">
+        <div class="clientlist-screen screen">
+            <div class="screen-content">
+                <section class="top-content">
+                    <span class='button back'>
+                        <i class='fa fa-angle-double-left'></i>
+                        Cancel
+                    </span>
+                    <span class='searchbox'>
+                        <input placeholder='Search....' />
+                        <span class='search-clear'></span>
+                    </span>
+                    <span class='searchbox'></span>
+                </section>
+                <section class="full-content">
+                    <div class='window'>
+                        <section class='subwindow collapsed'>
+                            <div class='subwindow-container'>
+                                <div class='subwindow-container-fix client-details-contents'>
+                                </div>
+                            </div>
+                        </section>
+                        <section class='subwindow'>
+                            <div class='subwindow-container'>
+                                <div class='subwindow-container-fix touch-scrollable scrollable-y'>
+                                    <table class='client-list'>
+                                        <thead>
+                                            <tr>
+                                                <th>Order Ref.</th>
+                                                <th>Customer Name</th>
+                                                <th>Create Date</th>
+                                                <th>Total Amount</th>
+                                                <th>Process Order</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class='wv-order-list-contents'>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </t>
+     <t t-name="SaleOrderButton">
+        <div class='control-button'>
+            <span class='control-button-number'>
+                <t t-esc="widget.ecom_orders()" />
+            </span>
+            Sales Order
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,10 @@
+.o_application_switcher .o_application_switcher_footer{
+    display: none;
+}
+
+.o_app_switcher_footer {
+    display: none;
+}
+.database_expiration_panel {
+    display: none;
+}
