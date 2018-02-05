@@ -6,3 +6,4 @@
 unicodecsv
 python-chess
 zeep
+openpyxl
