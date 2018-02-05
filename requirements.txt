@@ -4,3 +4,4 @@
 # process, which may cause wedges in the gate later.
 
 unicodecsv
+chess
