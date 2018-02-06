@@ -1,0 +1,7 @@
+# Untracked files:
+bin/
+*.pyc
+.settings/
+.project
+.pydevproject
+.idea
